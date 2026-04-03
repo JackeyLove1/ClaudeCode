@@ -24,6 +24,9 @@ jobs:
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
+        with:
+          # Creates/enables the Pages site with GitHub Actions as source when missing (fixes GET .../pages 404).
+          enablement: true
 
       - name: Install Rust toolchain
         uses: dtolnay/rust-toolchain@stable
