@@ -1,0 +1,17 @@
+[book]
+title = "Claude Code Harness Engineering Notes"
+language = "zh-CN"
+src = "docs"
+
+[build]
+build-dir = "book"
+create-missing = false
+
+[output.html]
+site-url = "/claude-code/"
+git-repository-url = "https://github.com/YOUR_GITHUB_USERNAME/claude-code"
+edit-url-template = "https://github.com/YOUR_GITHUB_USERNAME/claude-code/edit/main/{path}"
+default-theme = "light"
+preferred-dark-theme = "navy"
+smart-punctuation = true
+mathjax-support = false

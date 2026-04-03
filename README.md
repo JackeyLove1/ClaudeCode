@@ -80,6 +80,37 @@ This repository contains a mirrored `src/` snapshot for research and analysis.
 
 ---
 
+## Book Site
+
+This repository now includes an `mdBook`-based documentation site so it can be published in the same structure as:
+
+- `https://YOUR_GITHUB_USERNAME.github.io/claude-code/`
+- `https://YOUR_GITHUB_USERNAME.github.io/claude-code/基础知识.html`
+
+### Local preview
+
+```bash
+mdbook serve
+```
+
+### Local build
+
+```bash
+mdbook build
+```
+
+### GitHub Pages deployment
+
+Push to `main` and GitHub Actions will build and deploy the book using `.github/workflows/pages.yml`.
+
+If you rename the repository, update these fields in `book.toml`:
+
+- `site-url`
+- `git-repository-url`
+- `edit-url-template`
+
+---
+
 ## Directory Structure
 
 ```text
