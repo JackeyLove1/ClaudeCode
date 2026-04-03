@@ -11,3 +11,9 @@
 - [工具调用](工具调用.md)
 - [安全设计](安全设计.md)
 - [Prompt 系统](Prompt系统.md)
+
+# 第三部分：生态扩展
+- [生态扩展总览](生态扩展总览.md)
+  - [Skill系统](Skill系统.md)
+  - [Plugin系统](Plugin系统.md)
+  - [MCP集成](MCP集成.md)
