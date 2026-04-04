@@ -26,7 +26,13 @@ import { TOOL_SEARCH_TOOL_NAME } from '../tools/ToolSearchTool/prompt.js'
 import { SYNTHETIC_OUTPUT_TOOL_NAME } from '../tools/SyntheticOutputTool/SyntheticOutputTool.js'
 import { ENTER_WORKTREE_TOOL_NAME } from '../tools/EnterWorktreeTool/constants.js'
 import { EXIT_WORKTREE_TOOL_NAME } from '../tools/ExitWorktreeTool/constants.js'
-import { WORKFLOW_TOOL_NAME } from '../tools/WorkflowTool/constants.js'
+/* eslint-disable @typescript-eslint/no-require-imports */
+const WORKFLOW_TOOL_NAME = feature('WORKFLOW_SCRIPTS')
+  ? (
+      require('../tools/WorkflowTool/constants.js') as typeof import('../tools/WorkflowTool/constants.js')
+    ).WORKFLOW_TOOL_NAME
+  : 'workflow'
+/* eslint-enable @typescript-eslint/no-require-imports */
 import {
   CRON_CREATE_TOOL_NAME,
   CRON_DELETE_TOOL_NAME,

@@ -329,6 +329,9 @@ stop hooks 之后，如果 `TOKEN_BUDGET` 开启，`query.ts` 会调用 `checkTo
 
 前者用于边 streaming 边完成部分工具执行；后者是传统的批处理执行入口。
 
+如果你想看这条路径的细节，推荐直接对照 `docs/工具调用.md` 里的“9. 流式工具执行”一节阅读。  
+那一节会专门展开它的队列模型、并发规则、结果回灌方式，以及用户中断 / Bash sibling error / fallback 时的处理逻辑。
+
 所以工具不是一定要在 assistant 全部输出完后才统一跑完。  
 如果 streaming tool execution 打开，一部分工具结果可以更早完成并提前进入 transcript。
 

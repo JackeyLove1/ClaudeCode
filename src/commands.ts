@@ -169,7 +169,15 @@ import {
 import memoize from 'lodash-es/memoize.js'
 import { isUsing3PServices, isClaudeAISubscriber } from './utils/auth.js'
 import { isFirstPartyAnthropicBaseUrl } from './utils/model/providers.js'
-import env from './commands/env/index.js'
+/* eslint-disable @typescript-eslint/no-require-imports */
+const env = (() => {
+  try {
+    return (require('./commands/env/index.js') as typeof import('./commands/env/index.js')).default
+  } catch {
+    return null
+  }
+})()
+/* eslint-enable @typescript-eslint/no-require-imports */
 import exit from './commands/exit/index.js'
 import exportCommand from './commands/export/index.js'
 import model from './commands/model/index.js'
@@ -246,7 +254,7 @@ export const INTERNAL_ONLY_COMMANDS = [
   teleport,
   antTrace,
   perfIssue,
-  env,
+  ...(env ? [env] : []),
   oauthRefresh,
   debugToolCall,
   agentsPlatform,
