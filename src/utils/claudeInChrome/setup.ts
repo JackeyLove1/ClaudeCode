@@ -1,4 +1,14 @@
-import { BROWSER_TOOLS } from '@ant/claude-for-chrome-mcp'
+/* eslint-disable @typescript-eslint/no-require-imports */
+const BROWSER_TOOLS = (() => {
+  try {
+    return (
+      require('@ant/claude-for-chrome-mcp') as typeof import('@ant/claude-for-chrome-mcp')
+    ).BROWSER_TOOLS
+  } catch {
+    return []
+  }
+})()
+/* eslint-enable @typescript-eslint/no-require-imports */
 import { chmod, mkdir, readFile, writeFile } from 'fs/promises'
 import { homedir } from 'os'
 import { join } from 'path'

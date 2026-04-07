@@ -1,13 +1,12 @@
-// Content for the verify bundled skill.
-// Each .md file is inlined as a string at build time via Bun's text loader.
+// Placeholder content for the verify bundled skill.
+// The original repository expects markdown assets that are not present
+// in this archive snapshot, so we provide minimal inline content.
 
-import cliMd from './verify/examples/cli.md'
-import serverMd from './verify/examples/server.md'
-import skillMd from './verify/SKILL.md'
+export const SKILL_MD = `# Verify
 
-export const SKILL_MD: string = skillMd
+Use this skill to think through how a change should be verified.`
 
 export const SKILL_FILES: Record<string, string> = {
-  'examples/cli.md': cliMd,
-  'examples/server.md': serverMd,
+  'examples/cli.md': '# CLI verification example\n\nRun the relevant CLI command and inspect the output.\n',
+  'examples/server.md': '# Server verification example\n\nStart the server and validate the expected response path.\n',
 }
