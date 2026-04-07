@@ -8,6 +8,7 @@
 
 # 第二部分：机制拆解
 - [上下文预处理](上下文预处理.md)
+- [跨 Memory Context 机制](跨Memory Context机制.md)
 - [工具调用](工具调用.md)
 - [安全设计](安全设计.md)
 - [Prompt 系统](Prompt系统.md)
