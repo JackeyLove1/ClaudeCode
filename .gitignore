@@ -112,3 +112,8 @@ instance/
 # =========================
 tmp/
 temp/
+
+# claude
+.claude/
+.codex/
+.agents/
